@@ -93,7 +93,7 @@ def handle_request(app, event, context):
         body = base64.b64decode(body)
     if isinstance(body, string_types):
         body = to_bytes(body, charset="utf-8")
-    console.log(event)
+    print(event)
     environ = {
         "CONTENT_LENGTH": str(len(body)),
         "CONTENT_TYPE": headers.get(u"Content-Type", ""),
